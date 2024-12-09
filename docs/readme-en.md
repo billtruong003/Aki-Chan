@@ -1,6 +1,11 @@
-# Aki-Maid Chatbot
-![Aki-Maid](aki-maid.webp)  
-**Aki-Maid** is a chatbot application powered by the **Llama3.2** model that answers questions and processes images uploaded by users. The app is built using **Streamlit** and **Ollama API**.
+# Aki-Chan Maid Chatbot
+<p align="center">
+  <img src="../aki-maid.webp" alt="Aki-Maid" style="border-radius: 50%; border: 5px solid #ff6600; width: 200px"/>
+  <br>
+  <strong style="font-size: 30px;">🌸 アキちゃん 🌸</strong>
+</p>
+
+**Aki-Chan** is a chatbot application powered by the **Llama3.2** model that answers questions and processes images uploaded by users. The app is built using **Streamlit** and **Ollama API**.
 
 ## 1. **Environment Setup**
 
@@ -123,7 +128,3 @@ The application will save the chat history into a **`chat_history.json`** file. 
 ---
 
 **Note:** Make sure everything is properly configured before running the app, including downloading the model and setting up the Ollama API.
-
----
-
-Chúc bạn có những cuộc trò chuyện thật vui vẻ với Aki!
