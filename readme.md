@@ -1,6 +1,6 @@
 # Aki-Maid Chatbot
 ![Aki-Maid](aki-maid.webp)
-**Aki-Maid** là một ứng dụng chatbot sử dụng mô hình **Llama3.2** để trả lời câu hỏi và xử lý hình ảnh từ người dùng. Ứng dụng được xây dựng bằng **Streamlit** và **Ollama API**.
+**Aki-Chan** là một ứng dụng chatbot sử dụng mô hình **Llama3.2** để trả lời câu hỏi và xử lý hình ảnh từ người dùng. Ứng dụng được xây dựng bằng **Streamlit** và **Ollama API**.
 
 ## 1. **Cài Đặt Môi Trường**
 
