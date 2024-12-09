@@ -1,7 +1,3 @@
-Dưới đây là phiên bản tiếng Anh của README mà bạn yêu cầu (`README-en.md`), được viết một cách dễ thương và dễ hiểu giống như phiên bản tiếng Việt:
-
----
-
 # Aki-Maid Chatbot
 ![Aki-Maid](aki-maid.webp)  
 **Aki-Maid** is a chatbot application powered by the **Llama3.2** model that answers questions and processes images uploaded by users. The app is built using **Streamlit** and **Ollama API**.

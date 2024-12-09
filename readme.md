@@ -1,47 +1,43 @@
-Dưới đây là phiên bản tiếng Anh của README mà bạn yêu cầu (`README-en.md`), được viết một cách dễ thương và dễ hiểu giống như phiên bản tiếng Việt:
-
----
-
 # Aki-Maid Chatbot
-![Aki-Maid](aki-maid.webp)  
-**Aki-Maid** is a chatbot application powered by the **Llama3.2** model that answers questions and processes images uploaded by users. The app is built using **Streamlit** and **Ollama API**.
+![Aki-Maid](aki-maid.webp)
+**Aki-Maid** là một ứng dụng chatbot sử dụng mô hình **Llama3.2** để trả lời câu hỏi và xử lý hình ảnh từ người dùng. Ứng dụng được xây dựng bằng **Streamlit** và **Ollama API**.
 
-## 1. **Environment Setup**
+## 1. **Cài Đặt Môi Trường**
 
-### Step 1: Install Python
+### Bước 1: Tải và Cài Đặt Python
 
-The application requires **Python 3.8+**. If you haven't installed Python yet, you can download it from [python.org](https://www.python.org/downloads/).
+Ứng dụng yêu cầu **Python 3.8+**. Nếu bạn chưa cài đặt Python, bạn có thể tải từ [python.org](https://www.python.org/downloads/).
 
-Make sure Python and **pip** (Python package manager) are installed by running the following commands:
+Đảm bảo rằng bạn đã cài đặt Python và **pip** (trình quản lý gói Python) bằng lệnh:
 
 ```bash
 python --version
 pip --version
 ```
 
-### Step 2: Install Dependencies
+### Bước 2: Cài Đặt Thư Viện
 
-Create a virtual environment and install the necessary libraries using the steps below:
+Tạo một môi trường ảo và cài đặt các thư viện cần thiết bằng các bước dưới đây:
 
-1. **Create a virtual environment**:
+1. **Tạo môi trường ảo**:
    ```bash
    python -m venv venv
    ```
 
-2. **Activate the virtual environment**:
+2. **Kích hoạt môi trường ảo**:
 
-   - On **Windows**:
+   - Trên **Windows**:
      ```bash
      .\venv\Scripts\activate
      ```
-   - On **MacOS/Linux**:
+   - Trên **MacOS/Linux**:
      ```bash
      source venv/bin/activate
      ```
 
-3. **Install dependencies from `requirements.txt`**:
+3. **Cài đặt các phụ thuộc từ `requirements.txt`**:
 
-   Ensure you have a `requirements.txt` file in your project. The content of `requirements.txt` will look like this:
+   Đảm bảo rằng bạn đã có một file `requirements.txt` trong dự án của mình. Nội dung của file `requirements.txt` sẽ như sau:
 
    **`requirements.txt`**:
    ```txt
@@ -54,67 +50,67 @@ Create a virtual environment and install the necessary libraries using the steps
    pandas==2.2.3
    ```
 
-   Then, install all the libraries with the following command:
+   Sau đó, cài đặt tất cả các thư viện từ `requirements.txt` bằng lệnh:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-### Step 3: Download the **Llama3.2** Model
+### Bước 3: Tải Mô Hình **Llama3.2**
 
-To use the **Llama3.2** model, you'll need to download it via the **Ollama API**. You need to install **Ollama** and use its API to download the model.
+Để sử dụng mô hình **Llama3.2**, bạn cần tải mô hình này thông qua **Ollama API**. Bạn cần cài đặt **Ollama** và sử dụng API để tải mô hình.
 
-1. **Install Ollama**:
+1. **Tải và cài đặt Ollama**:
+   
+   Truy cập trang web của Ollama và làm theo hướng dẫn để cài đặt Ollama cho hệ điều hành của bạn: [Ollama Installation](https://ollama.com/).
 
-   Go to Ollama's website and follow the instructions to install Ollama for your operating system: [Ollama Installation](https://ollama.com/).
+2. **Tải mô hình Llama3.2**:
 
-2. **Download the Llama3.2 model**:
-
-   After installing Ollama, you can download the Llama3.2 model with the following command:
+   Sau khi cài đặt Ollama, bạn có thể tải mô hình Llama3.2 bằng lệnh sau:
 
    ```bash
    ollama pull llama3.2
    ```
 
-   This command will download the **Llama3.2** model to your computer, which will be used by the application.
+   Lệnh này sẽ tải mô hình **Llama3.2** xuống máy tính của bạn để sử dụng trong ứng dụng.
 
-### Step 4: Run the Application
+### Bước 4: Chạy Ứng Dụng
 
-Once all dependencies are installed and the model is downloaded, you can run the **Aki-Maid** application using Streamlit with the following command:
+Sau khi cài đặt tất cả các phụ thuộc và tải mô hình xong, bạn có thể chạy ứng dụng **Aki-Maid** bằng Streamlit với lệnh:
 
 ```bash
 streamlit run app.py
 ```
 
-This will start the Streamlit app at `http://localhost:8501`, where you can chat with Aki.
+Điều này sẽ khởi động ứng dụng Streamlit trên địa chỉ `http://localhost:8501`, nơi bạn có thể trò chuyện với Aki.
 
 ---
 
-## 2. **Application Configuration**
+## 2. **Cấu Hình Ứng Dụng**
 
-### The `config_character.txt` File
+### File cấu hình `config_character.txt`
 
-The application uses a file called **`config_character.txt`** to configure Aki's personality. You can modify this file to change how Aki responds. For example:
+Ứng dụng sử dụng một file **`config_character.txt`** để cấu hình tính cách của mô hình. Bạn có thể chỉnh sửa file này để thay đổi cách trả lời của Aki. Ví dụ:
 
 ```
-I am Aki, a friendly, cute, and intelligent virtual assistant. Feel free to ask me anything!
+Em là Aki, một trợ lý ảo thân thiện, dễ thương và thông minh. Hãy hỏi em bất kỳ câu hỏi nào!
 ```
 
-### Chat History
+### Lịch Sử Trò Chuyện
 
-The application will save the chat history into a **`chat_history.json`** file. This file will be read when you open the app again, keeping your past conversations.
+Ứng dụng sẽ lưu lại lịch sử trò chuyện vào một file **`chat_history.json`**. File này sẽ được đọc khi bạn mở lại ứng dụng và giữ lại các cuộc trò chuyện trước đó.
 
 ---
 
-## 3. **Troubleshooting Common Issues**
+## 3. **Giải Quyết Các Lỗi Phổ Biến**
 
-- **Model not downloading**: If you encounter issues when downloading the model from Ollama, make sure you installed Ollama correctly, and that the model was successfully downloaded to your machine.
+- **Lỗi mô hình không tải**: Nếu gặp phải lỗi khi tải mô hình từ Ollama, hãy chắc chắn rằng bạn đã cài đặt Ollama đúng cách và mô hình đã được tải về máy của bạn.
   
-- **API or connection errors**: If the app is unable to connect to the Ollama API, check your internet connection and make sure Ollama is running correctly.
+- **Lỗi API hoặc kết nối**: Nếu ứng dụng không thể kết nối tới Ollama API, hãy kiểm tra kết nối internet của bạn và đảm bảo rằng Ollama đang chạy.
 
 ---
 
-## 4. **Useful Links**
+## 4. **Tài Liệu và Liên Kết Hữu Ích**
 
 - [Streamlit Documentation](https://docs.streamlit.io/)
 - [Ollama Documentation](https://ollama.com/)
@@ -122,12 +118,8 @@ The application will save the chat history into a **`chat_history.json`** file. 
 
 ---
 
-### Wishing you great success with Aki-Maid Chatbot! 🚀
+### Chúc bạn thành công khi sử dụng Aki-Maid Chatbot! 🚀
 
 ---
 
-**Note:** Make sure everything is properly configured before running the app, including downloading the model and setting up the Ollama API.
-
----
-
-Chúc bạn có những cuộc trò chuyện thật vui vẻ với Aki!
+**Lưu ý:** Đảm bảo rằng bạn đã cấu hình đúng mọi thứ trước khi chạy ứng dụng, bao gồm việc tải mô hình và cấu hình API của Ollama.
